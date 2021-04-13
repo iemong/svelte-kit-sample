@@ -1,5 +1,10 @@
 <script>
 	import Counter from '$lib/Counter.svelte';
+	import '$lib/Button.svelte';
+
+	const handleClickButton = () => {
+		console.log('clicked');
+	};
 </script>
 
 <svelte:head>
@@ -10,6 +15,7 @@
 	<h1>Hello world!</h1>
 
 	<Counter />
+	<my-button on:button-click={handleClickButton}>ボタン</my-button>
 
 	<p>Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte apps.</p>
 </main>
